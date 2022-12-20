@@ -1,0 +1,22 @@
+body.bg-site{
+    background-color: rgb(230, 230, 230);
+}
+
+header * a{
+    color: black;
+    text-decoration: none !important;
+}
+
+header nav * img{
+    transition: 0.5s all;
+}
+
+header nav li:hover * img{
+    transform: scale(1.2);
+}
+
+.sobre * a{
+    font-size: 1.2rem !important;
+    text-decoration: none !important;
+}
+
