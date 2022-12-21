@@ -30,21 +30,14 @@
 
 <body class="bg-site">
 
+    <!--Barra de navegação fixa-->
     {%include 'nav-lateral.html'%}
 
-    <!--
-        <a href="#" class="position-fixed fixed-bottom text-right p-3">
-        <img src="{%static 'img/casa.png'%}" alt="" style="width: 5%;">
-    </a>
-
-    -->
+    <!--Marcador de inicio-->
     <span id="topo" class="navegacao"></span>
 
-    <!--Header Start-->
-        {%include 'header.html'%}
-    <!--Header End-->
-
-
+    {%include 'header.html'%}
+    
     <main>
         <!--Sobre e Projetos-->
         <section class="container mt-3 mx-auto p-0 text-center d-flex justify-content-between gap-3 w-100">
@@ -52,14 +45,16 @@
 
             {%include 'principais-projetos.html'%}
         </section>
+
+        <!--Marcador de meio-->
+        <span id="meio" class="navegacao"></span>
+
         <!--Acadêmico-->
         <section id="academico" class="container mt-3 mx-auto p-0 text-center bg-light p-3 rounded">
             {%include 'academico.html'%}
         </section>
 
     </main>
-
-    <span id="meio" class="navegacao"></span>
 
     <aside id="certificados">
         <!--Certificados-->
