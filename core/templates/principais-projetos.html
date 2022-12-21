@@ -6,7 +6,11 @@
             <div class="row py-lg-3">
                 <div class="col-lg-10 col-md-8 mx-auto">
                     <h1 class="fw-light">Principais Projetos</h1>
-                    <p class="lead text-muted">Seja bem vindo ao meu portifólio, abaixo segue uma pequena lista dos principais projetos já desenvolvidos por mim. Você pode ver a lista completa navegando no menu acima em "Projetos" e ou visualizar os códigos fontes destes no meu <a href="https://github.com/michellssgui22" target="_blank" class="badge text-primary fs-5 p-0">GitHub.</a> </p>
+                    <p class="lead text-muted">Seja bem vindo ao meu portifólio, abaixo segue uma pequena lista dos
+                        principais projetos já desenvolvidos por mim. Você pode ver a lista completa navegando no menu
+                        acima em "Projetos" e ou visualizar os códigos fontes destes no meu <a
+                            href="https://github.com/michellssgui22" target="_blank"
+                            class="badge text-primary fs-5 p-0">GitHub.</a> </p>
                     <p class="lead text-muted">Sinta-se à vontade para explorar...</p>
                 </div>
             </div>
@@ -16,120 +20,28 @@
             <div class="container">
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
-                    
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/meu-portifolio.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Meu Portifólio</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group gap-1">
-                                        <button type="button" class="btn btn-sm btn-secondary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">20/12/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
+                    {%for p in projetos%}
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="{%static 'img/meu-portifolio.png'%}" alt=""
+                                class="bd-placeholder-img card-img-top" width="100%" height="225" role="img"
+                                aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
                             <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
+                                <h2>{{p.titulo}}</h2>
+                                <p class="text-justify">{{p.comentario}}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group gap-1">
-                                        <button type="button" class="btn btn-sm btn-secondary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-primary">On-Line</button>
+                                        <a href="{{p.urlgit}}" class="btn btn-sm btn-secondary" target="_blank">GitHub</a>
+                                        <a href="{{p.urlsite}}" class="btn btn-sm btn-primary" target="_blank">On-Line</a>
                                     </div>
-                                    <small class="text-muted">01/11/2022</small>
+                                    <small class="text-muted">{{p.dataConclusao}}</small>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group gap-1">
-                                        <button type="button" class="btn btn-sm btn-secondary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">01/11/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group gap-1">
-                                        <button type="button" class="btn btn-sm btn-secondary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">01/11/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group gap-1">
-                                        <button type="button" class="btn btn-sm btn-secondary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">01/11/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group gap-1">
-                                        <button type="button" class="btn btn-sm btn-secondary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">01/11/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {%endfor%}
 
                 </div>
             </div>
