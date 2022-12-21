@@ -1,101 +1,156 @@
 {%load bootstrap4%}
 {%load static%}
-<section class="w-75 p-3 rounded bg-light">
-    <article>
-        <section class="py-1 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Principais Projetos</h1>
-                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the
-                        creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it
-                        entirely.</p>
-                </div>
-            </div>
-        </section>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-        <div class="album py-5 bg-light">
-            <div class="container">
+<head>
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
-                    
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/portifolio.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Meu Portifólio</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--Estilos locais-->
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/global.css' %}">
+
+    <!--Font Awesome Free-->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+    <title>Michel - Portifólio</title>
+
+</head>
+
+<body class="bg-site">
+
+    {%include 'nav-lateral.html'%}
+
+    <!--
+        <a href="#" class="position-fixed fixed-bottom text-right p-3">
+        <img src="{%static 'img/casa.png'%}" alt="" style="width: 5%;">
+    </a>
+
+    -->
+    <span id="topo" class="navegacao"></span>
+
+    <!--Header Start-->
+        {%include 'header.html'%}
+
+        <section class="container bg-light mt-3 mx-auto p-0 text-center d-flex justify-content-between gap-3 w-100 rounded">
+                <article>
+                    <section class="py-1 text-center container">
+                        <div class="row py-lg-5">
+                            <div class="col-lg-6 col-md-8 mx-auto">
+                                <h1 class="fw-light">Projetos</h1>
+                                <p class="lead text-muted">Something short and leading about the collection below—its contents, the
+                                    creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it
+                                    entirely.</p>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <div class="album py-5 bg-light">
+                        <div class="container">
+            
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                                
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="{%static 'img/portifolio.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                        role="img" aria-label="Placeholder: Thumbnail"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <div class="card-body">
+                                            <h2>Meu Portifólio</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
+                                                </div>
+                                                <small class="text-muted">20/12/2022</small>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <small class="text-muted">20/12/2022</small>
                                 </div>
+            
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                        role="img" aria-label="Placeholder: Thumbnail"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <div class="card-body">
+                                            <h2>Varrendo Dados</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
+                                                </div>
+                                                <small class="text-muted">01/11/2022</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                        role="img" aria-label="Placeholder: Thumbnail"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <div class="card-body">
+                                            <h2>Varrendo Dados</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
+                                                </div>
+                                                <small class="text-muted">01/11/2022</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                        role="img" aria-label="Placeholder: Thumbnail"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <div class="card-body">
+                                            <h2>Varrendo Dados</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
+                                                </div>
+                                                <small class="text-muted">01/11/2022</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
                             </div>
                         </div>
                     </div>
+                </article>
+            </section>
 
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">01/11/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <span id="fim" class="navegacao"></span>
 
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">01/11/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'img/scraping.png'%}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <div class="card-body">
-                                <h2>Varrendo Dados</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur velit aspernatur quis qui, laborum incidunt dolor illum excepturi asperiores voluptatem ex, praesentium eaque dolorem suscipit maiores aliquid natus facere.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-primary">GitHub</button>
-                                        <button type="button" class="btn btn-sm btn-outline-primary">On-Line</button>
-                                    </div>
-                                    <small class="text-muted">01/11/2022</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </article>
-</section>
+    {% bootstrap_jquery %}
+    {% bootstrap_javascript %}
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

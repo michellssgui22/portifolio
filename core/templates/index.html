@@ -1,29 +1,30 @@
-{%load bootstrap4%} 
+{%load bootstrap4%}
 {%load static%}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<!--Estilos locais-->
-{% bootstrap_css %}
-<link rel="stylesheet" href="{%static 'css/style.css'%}">
-<link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css'%}">
-<link rel="stylesheet" href="{%static 'css/global.css' %}">
+    <!--Estilos locais-->
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/global.css' %}">
 
-<!--Font Awesome Free-->
-<link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
-<link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
-<link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <!--Font Awesome Free-->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
-<title>Michel - Portifólio</title>
+    <title>Michel - Portifólio</title>
 
 </head>
 
@@ -39,17 +40,17 @@
     -->
     <span id="topo" class="navegacao"></span>
 
-    <header class="container d-flex justify-content-between my-0 mx-auto rounded py-2 pt-3 pb-0 bg-light w-100">
+    <!--Header Start-->
         {%include 'header.html'%}
-    </header>
+    <!--Header End-->
 
 
-    <main >
+    <main>
         <!--Sobre e Projetos-->
         <section class="container mt-3 mx-auto p-0 text-center d-flex justify-content-between gap-3 w-100">
             {%include 'sobre.html'%}
 
-            {%include 'projetos.html'%}
+            {%include 'principais-projetos.html'%}
         </section>
         <!--Acadêmico-->
         <section id="academico" class="container mt-3 mx-auto p-0 text-center bg-light p-3 rounded">
@@ -64,19 +65,20 @@
         <!--Certificados-->
         {%include 'certificados.html'%}
     </aside>
-    
-    <span id="fim" class="navegacao"></span>
 
     <footer>
 
     </footer>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
-{% bootstrap_jquery %}
-{% bootstrap_javascript %}
-<script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <span id="fim" class="navegacao"></span>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    {% bootstrap_jquery %}
+    {% bootstrap_javascript %}
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
 </body>
+
 </html>
