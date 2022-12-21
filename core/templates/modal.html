@@ -1,0 +1,103 @@
+{%load bootstrap4%}
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--Estilos locais-->
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/global.css' %}">
+
+    <!--Font Awesome Free-->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <title>Contatos</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/modals/">
+    <link href="modals.css" rel="stylesheet">
+</head>
+
+<body>
+
+    {%include 'header.html'%}
+
+    <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+                    <h1 class="fw-bold mb-0 fs-2">Envie uma mensagem.</h1>
+                    <a href="/" class="btn-close" aria-label="Close"></a>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <form class="">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Seu e-mail</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea name="message" style="width:100%; height:150px;" class="form-control rounded-3">
+                            </textarea>
+                            <label for="floatingPassword">Escreva sua mensagem aqui...</label>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Enviar</button>
+
+                        <small class="text-muted">Click para enviar, responderei o mais breve possível.</small>
+                        <hr class="my-4">
+
+                        <h2 class="fs-5 fw-bold mb-3 text-center">Vistie minhas redes sociais...</h2>
+                        <section class="mb-4 text-center">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                            <!-- Google -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                              ><i class="fab fa-youtube"></i
+                            ></a>
+                      
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                              ><i class="fab fa-instagram"></i
+                            ></a>
+                      
+                            <!-- Linkedin -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                              ><i class="fab fa-linkedin-in"></i
+                            ></a>
+                      
+                            <!-- Github -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                              ><i class="fab fa-github"></i
+                            ></a>
+                          </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    {% bootstrap_jquery %}
+    {% bootstrap_javascript %}
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>
