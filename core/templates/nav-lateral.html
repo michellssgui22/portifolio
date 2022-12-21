@@ -1,0 +1,33 @@
+{%load bootstrap4%} 
+{%load static%}
+<div class="nav-lateral p-2">
+    <a href="#topo" class="btn btn-primary"><i class="fa-solid fa-up-long"></i></a><br>
+    <a href="#meio" class="btn btn-danger"><i class="fa-solid fa-up-down"></i></a><br>
+    <a href="#fim" class="btn btn-primary"><i class="fa-solid fa-up-long"></i></i></a>
+</div>
+<style>
+    .nav-lateral{
+        width: auto;
+        height: auto;
+        position: fixed;
+        top: 35%;
+        right: 0;
+    }
+
+    .nav-lateral a{
+        width: auto;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-lateral a i{
+        color: white;
+    }
+
+    .nav-lateral :nth-child(5) i{
+        transform: rotate(180deg);
+    }
+
+</style>

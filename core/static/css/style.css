@@ -20,4 +20,8 @@ header nav li:hover * img{
     text-decoration: none !important;
 }
 
+.navegacao{
+    opacity: 0;
+}
+
 

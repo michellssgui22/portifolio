@@ -29,13 +29,20 @@
 
 <body class="bg-site">
 
-    <a href="#" class="position-fixed fixed-bottom text-right p-3">
+    {%include 'nav-lateral.html'%}
+
+    <!--
+        <a href="#" class="position-fixed fixed-bottom text-right p-3">
         <img src="{%static 'img/casa.png'%}" alt="" style="width: 5%;">
     </a>
+
+    -->
+    <span id="topo" class="navegacao"></span>
 
     <header class="container d-flex justify-content-between my-0 mx-auto rounded py-2 pt-3 pb-0 bg-light w-100">
         {%include 'header.html'%}
     </header>
+
 
     <main >
         <!--Sobre e Projetos-->
@@ -51,11 +58,15 @@
 
     </main>
 
+    <span id="meio" class="navegacao"></span>
+
     <aside id="certificados">
         <!--Certificados-->
         {%include 'certificados.html'%}
     </aside>
     
+    <span id="fim" class="navegacao"></span>
+
     <footer>
 
     </footer>
