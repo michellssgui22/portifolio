@@ -1,27 +1,130 @@
-body.bg-site{
+body.bg-site {
     background-color: rgb(230, 230, 230);
 }
 
-header * a{
+header * a {
     color: black;
     text-decoration: none !important;
 }
 
-header nav * img{
+header nav * img {
     transition: 0.5s all;
 }
 
-header nav li:hover * img{
+header nav li:hover * img {
     transform: scale(1.2);
 }
 
-.sobre * a{
+.sobre * a {
     font-size: 1.2rem !important;
     text-decoration: none !important;
 }
 
-.navegacao{
+.navegacao {
     opacity: 0;
 }
 
+/*Responsividade*/
 
+@media screen and (max-width: 900px) {
+    p{
+        text-align: justify !important;
+    }
+
+    #nav-lateral {
+        display: none;
+    }
+
+    header#cabecalho {
+        width: 100% !important;
+        display: block !important;
+        padding: 5% !important;
+        border-bottom: 1px solid rgb(99, 99, 99);
+    }
+
+    header #logo {
+        display: block;
+        width: 100% !important;
+    }
+
+    header #menu {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 20px !important;
+    }
+
+    header #menu img {
+        width: 90% !important;
+        margin: auto !important;
+    }
+
+    header #menu img:hover{
+        transform: scale(1.2) !important;
+    }
+
+    header #menu p {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    main :nth-child(1) {
+        display: block !important;
+    }
+
+    main #sobre,
+    #principais-projetos {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    main #sobre {
+        width: 100% !important;
+    }
+
+    main #sobre a {
+        width: 100% !important;
+        height: auto;
+        margin-right: 5% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: left !important;
+    }
+
+    main #principais-projetos{
+        width: 100% !important;
+        margin: auto !important;
+        text-align: center !important;
+        max-width: 450px;
+    }
+
+    main #principais-projetos *{
+        width: 100% !important;
+    }
+
+    main #principais-projetos div.btn-group {
+        width: 100% !important;
+        height: auto;
+        margin-right: 5% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    aside#certificados *{
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: auto !important;
+        max-width: 450px !important;
+        margin-bottom: 5% !important;
+    }
+
+
+}
