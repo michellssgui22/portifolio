@@ -3,137 +3,41 @@
 <div class="container px-4 py-5 mt-3 bg-light rounded">
     <h2 class="pb-2 border-bottom text-center fs-1">Certificados</h2>
 
-    <!--Certificados DNC-->
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-        <div class="d-flex flex-column align-items-start gap-2">
-            <h3 class="fw-bold">Certificados da Escola DNC</h3>
-            <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with
-                another sentence and probably just keep going until we run out of words.</p>
-        </div>
-
-        <div class="row row-cols-1 row-cols-sm-2 g-4">
-
-            <div class="d-flex flex-column gap-2">
-                <div
-                    class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                    <img src="{%static 'img/certificados/python-zero.png'%}" alt="" class="bd-placeholder-img card-img-top"
-                        width="100%" height="190" role="img" aria-label="Placeholder: Thumbnail"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                </div>
-                <h4 class="fw-semibold mb-0">Introdução à Python</h4>
-                <div class="d-flex justify-content-between">
-                    <p class="text-muted">18/03/2022</p>
-                    <p class="text-muted">20 Horas</p>
-                </div>
-                <div class="btn-group gap-2">
-                    <a href="#" target="_blank" type="button" class="btn btn-sm btn-secondary">Consultar</a>
-                    <button type="button" class="btn btn-sm btn-primary">Ampliar</button>
-                </div>
-            </div>
-
-            <div class="d-flex flex-column gap-2">
-                <div
-                    class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                    <img src="{%static 'img/certificados/certificado-sql.png'%}" alt="" class="bd-placeholder-img card-img-top"
-                        width="100%" height="190" role="img" aria-label="Placeholder: Thumbnail"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                </div>
-                <h4 class="fw-semibold mb-0">SQL for Data Science</h4>
-                <div class="d-flex justify-content-between">
-                    <p class="text-muted">13/06/2022</p>
-                    <p class="text-muted">12 Horas</p>
-                </div>
-                <div class="btn-group gap-2">
-                    <a href="#" target="_blank" type="button" class="btn btn-sm btn-secondary">Consultar</a>
-                    <button type="button" class="btn btn-sm btn-primary">Ampliar</button>
+    <section class="container bg-light mt-3 mx-auto p-0 gap-3 w-100 rounded">
+    
+            <div class="album py-5 bg-light">
+                <div class="container">
+    
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+                       
+                        {%for c in certificados%}
+                        <div class="col h-100">
+                            <div class="card shadow-sm">
+                                <img src="{{c.imagem.thumb.url}}" alt="{{c.curso}}"
+                                    class="bd-placeholder-img card-img-top" width="100%" height="280" role="img"
+                                    aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                    focusable="false">
+                                <div class="card-body text-left">
+                                    <h2>{{c.curso}}</h2>
+                                    <h4 class="card-subtitle text-muted">{{c.instituicao}}</h4>
+                                    <div class="d-flex justify-content-between align-items-center my-4">
+                                        <small class="text-muted">{{c.dataConclusao}}</small>
+                                        <small class="text-muted">{{c.totalHoras}} Horas</small>
+                                    </div>
+                                    <div class="btn-group justify-content-between">
+                                        <a href="{{c.urlvalidacao}}" class="btn btn-sm btn-secondary" target="_blank">Validação</a>
+                                        <a href="#" class="btn btn-sm btn-primary" target="_blank">Ampliar</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        {%endfor%}
+    
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </div>
-
-    <hr class="w-100">
-    <!--Certificados DSA-->
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-        <div class="d-flex flex-column align-items-start gap-2">
-            <h3 class="fw-bold">Certificados da DSA</h3>
-            <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with
-                another sentence and probably just keep going until we run out of words.</p>
-        </div>
-
-        <div class="row row-cols-1 row-cols-sm-2 g-4">
-
-            <div class="d-flex flex-column gap-2">
-                <div
-                    class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                    <img src="{%static 'img/certificados/certificate-introducao-a-ciencia-de-dados.png'%}" alt="" class="bd-placeholder-img card-img-top"
-                        width="100%" height="190" role="img" aria-label="Placeholder: Thumbnail"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                </div>
-                <h4 class="fw-semibold mb-0">Ciência de Dados</h4>
-                <div class="d-flex justify-content-between">
-                    <p class="text-muted">25/04/2022</p>
-                    <p class="text-muted">12 Horas</p>
-                </div>
-                <div class="btn-group gap-2">
-                    <a href="#" target="_blank" type="button" class="btn btn-sm btn-secondary">Consultar</a>
-                    <button type="button" class="btn btn-sm btn-primary">Ampliar</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <hr class="w-100">
-    <!--Certificados UDEMY-->
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-        <div class="d-flex flex-column align-items-start gap-2">
-            <h3 class="fw-bold">Plataforma UDEMY</h3>
-            <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with
-                another sentence and probably just keep going until we run out of words.</p>
-        </div>
-
-        <div class="row row-cols-1 row-cols-sm-2 g-4">
-
-            <div class="d-flex flex-column gap-2">
-                <div
-                    class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                    <img src="{%static 'img/certificados/django-geek.png'%}" alt="" class="bd-placeholder-img card-img-top"
-                        width="100%" height="190" role="img" aria-label="Placeholder: Thumbnail"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                </div>
-                <h4 class="fw-semibold mb-0">Python e Django</h4>
-                <div class="d-flex justify-content-between">
-                    <p class="text-muted">08/12/2022</p>
-                    <p class="text-muted">36 Horas</p>
-                </div>
-                <div class="btn-group gap-2">
-                    <a href="#" target="_blank" type="button" class="btn btn-sm btn-secondary">Consultar</a>
-                    <button type="button" class="btn btn-sm btn-primary">Ampliar</button>
-                </div>
-            </div>
-
-            <div class="d-flex flex-column gap-2">
-                <div
-                    class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                    <img src="{%static 'img/certificados/web-scraping.jpg'%}" alt="" class="bd-placeholder-img card-img-top"
-                        width="100%" height="190" role="img" aria-label="Placeholder: Thumbnail"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                </div>
-                <h4 class="fw-semibold mb-0">Python Web Scraping</h4>
-                <div class="d-flex justify-content-between">
-                    <p class="text-muted">08/12/2022</p>
-                    <p class="text-muted">12 Horas</p>
-                </div>
-                <div class="btn-group gap-2">
-                    <a href="#" target="_blank" type="button" class="btn btn-sm btn-secondary">Consultar</a>
-                    <button type="button" class="btn btn-sm btn-primary">Ampliar</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <hr class="w-100">
+    </section>
 
 </div>

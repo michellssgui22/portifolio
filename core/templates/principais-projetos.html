@@ -21,10 +21,11 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
 
-                    {%for p in projetos%}
-                    <div class="col">
+                    {%for p in principais%}
+                    {% if p.peso > 8 %}
+                    <div class="col h-100">
                         <div class="card shadow-sm">
-                            <img src="{%static 'img/meu-portifolio.png'%}" alt=""
+                            <img src="{{p.imagem.thumb.url}}" alt="{{p.titulo}}"
                                 class="bd-placeholder-img card-img-top" width="100%" height="225" role="img"
                                 aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
                                 focusable="false">
@@ -41,6 +42,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endif %}
                     {%endfor%}
 
                 </div>
