@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Projetos, Academico, Certificados
+from .models import Projetos, Academico, Certificados, VideoApresentacao, ContatoEmail
 
 @admin.register(Projetos)
 class ProjetosAdmin(admin.ModelAdmin):
@@ -14,3 +14,13 @@ class AcademicoAdmin(admin.ModelAdmin):
 @admin.register(Certificados)
 class CertificadosAdmin(admin.ModelAdmin):
     list_display = ('curso', 'instituicao', 'dataConclusao', 'totalHoras', 'modificado', 'ativo')
+
+
+@admin.register(VideoApresentacao)
+class VideoApresentacaoAdmin(admin.ModelAdmin):
+    list_display = ('url', 'modificado', 'ativo')
+    
+
+@admin.register(ContatoEmail)
+class ContatoEmailAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'email', 'mensagem')

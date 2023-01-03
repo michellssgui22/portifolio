@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'bootstrap4',
-    'fontawesomefree'
+    'fontawesomefree',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +125,19 @@ STATIC_URL = '/static/'
 MEDIA_URL = 'media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Email de test console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+"""
+# Email Produção
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'no-michellss.gui@gui.com.br'
+EMAIL_PORT = 587
+EMAIL_USE_TSL = True
+EMAIL_HOST_PASSWORD = 'senha'
+DEFAULT_FROM_EMAIL = 'michellss.gui@gui.com.br'
+"""
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

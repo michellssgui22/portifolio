@@ -1,0 +1,6 @@
+
+<div class="container bg-light rounded py-3 mb-3">
+    {%for u in urls%}
+    <iframe class="rounded" width="100%" height="500" src="{{u.url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {%endfor%}
+</div>

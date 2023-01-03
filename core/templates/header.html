@@ -34,7 +34,7 @@
         </a>
     </li>
     <li class="text-center m-auto p-0">
-        <a href="#">
+        <a href="{%url 'curriculo'%}">
             <img src="{%static 'img/curriculos.png'%}" alt="" style="width: 25%;">
             <p>Currículo</p>
         </a>
@@ -48,3 +48,11 @@
 
 </nav>
 </header>
+    {%if messages%}
+    {%for m in messages%}
+    <div class="alert alert-{{message.tags}} container px-5 text-right text-info">
+      <button type="button" class="close" data.dismiss="alert"></button>
+      <strong>{{m}}</strong>
+    </div>
+    {%endfor%}
+    {%endif%}

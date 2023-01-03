@@ -1,0 +1,115 @@
+{%load bootstrap4%}
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--Estilos locais-->
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/global.css' %}">
+
+    <!--Font Awesome Free-->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <title>Currículo</title>
+</head>
+
+<body class="bg-site">
+    <a href="{%static 'curriculo.pdf'%}" class="position-fixed fixed-bottom btnPdf btn btn-danger" style="right: 20px; left: auto; bottom: 20px;">Baixar PDF</a>
+
+    {%include 'header.html'%}
+
+    <div class="mx-auto my-3" style="width: 1200px; height: 1697px;">
+        <div class=" py-2 px-4 bg-white my-3">
+            <h1 class="text-secondary fs-2">Michel Souza Santana</h1>
+            <div class="d-flex justify-content-between">
+                <p class="fs-5"><i class="fa-solid fa-phone mr-1"></i>(47) 9 9908-1457</p>
+                <p class="fs-5"><i class="fa-solid fa-envelope mr-1"></i>michellss.py@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between gap-3 my-3">
+            <div class="bg-white w-50  p-4">
+                <h2><i class="fa-solid fa-gear mr-2"></i>Experiências</h2>
+                <h4>Consultor de Ciências de Dados (Student)</h4>
+                <p>2022 - Atual</p>
+                <p class="text-justify">
+                    Realizar análises preditivas e estatísticas, entender a estrutura de grandes bancos de dados e SQL,
+                    montar queries e importar para o Notebook Jupyter, criar algoritmos através de machine learning,
+                    compreender a linguagem de programação Python e suas bibliotecas Panda e Numpy.
+                </p>
+                <p class="text-justify">
+                    Além de organizar e realizar testes A/B, reportar gráficos em painéis e compreender o Big Data e
+                    Spark.Realizar análises preditivas e estatísticas, entender a estrutura de grandes bancos de dados e
+                    SQL, montar queries e importar para o Notebook Jupyter, criar algoritmos através de machine
+                    learning, compreender a linguagem de programação Python e suas bibliotecas Panda e Numpy. Além de
+                    organizar e realizar testes A/B, reportar gráficos em painéis e compreender o Big Data e Spark.
+                </p>
+                <p class="text-justify">
+                    Competências: Python Fundamentals · Machine Learning · SQL for Data Science · Visualização de dados
+                    · Metodologias Ágeis · Big data · Estatística · Manipulação e limpeza de dados
+                </p>
+            </div>
+
+            <div class=" bg-white w-50  p-4">
+                <h2><i class="fa-solid fa-school mr-2"></i>Formação</h2>
+
+                <div class="my-4">                    
+                    <h4>Formação em Dados</h4>
+                    <p>2022 - Atual</p>
+                    <p>Formação imersiva em dados, com 520 horas com foco na prática</p>
+                </div>
+
+                <hr>
+
+                <div class="my-4">                    
+                    <h4>Universidade Estácio De Sá</h4>
+                    <p>2020 - 2022</p>
+                    <p>Análise e Desenvolvimento de Sistemas</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-white my-3 w-100  p-4">
+            <h2><i class="fa-solid fa-certificate mr-2"></i>Certificados</h2>
+            <ul>
+                <li>Python Fundamentals</li>
+                <li>SQL for Data Science</li>
+                <li>Machine Learning</li>
+                <li>Statistics with Python</li>
+                <li>CRISP-DM</li>
+                <li>Scrum Fundamentals</li>
+                <li>Cloud Services</li>
+                <li>Data Protection</li>
+                <li>Information Security</li>
+                <li>Formação em Dados</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    {% bootstrap_jquery %}
+    {% bootstrap_javascript %}
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>

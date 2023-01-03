@@ -91,3 +91,30 @@ def produto_pre_save(signal, instance, sender, **kwargs):
 
 
 signals.pre_save.connect(produto_pre_save, sender=Certificados)
+
+
+class VideoApresentacao(Base):
+    url = models.URLField('URL')
+    data = models.DateField('Data Upload')
+    
+    class Meta:
+        verbose_name = 'Url'
+        verbose_name_plural = 'Urls'
+
+    def __str__(self):
+        return self.url
+    
+
+class ContatoEmail(Base):
+    nome = models.CharField('Nome', max_length=100)
+    email = models.EmailField('E-mail')
+    mensagem = models.TextField('Mensagem', max_length=500)
+    
+    class Meta:
+        verbose_name = 'Contato'
+        verbose_name_plural = 'Contatos'
+
+    def __str__(self):
+        return self.nome
+    
+    
